@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title>Reset password</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.min.css">
+</head>
+<body>
+
+
+  <div class="container">
+
+    <div class="jumbotron mx-auto">
+
+      <div class="top jumbotron-elem">
+              <img src="profile.png">
+              <span id="header">RESET PASSWORD</span>
+      </div>
+        <form>
+          <div class="body jumbotron-elem">
+            <p id="message">
+              Don't worry, it happens to everyone.</br>
+              Let us know what email address you use to login</br>
+              and we'll send you an email with instruction.
+            </p>
+            <div class="form-group">
+              <label for="email" id="emailLabel">EMAIL ADDRESS</label>
+                 <div class="note">
+                      <p data-toggle="tooltip" data-placement="top" title="required" class="blue-tooltip">*</p>
+                    <input type="email" class="form-control" required="" id="email" placeholder="Enter your email address">
+                  </div>
+                  <span id="emailErr">Invalid e-mail address</span>
+            </div>
+        </div>
+          <footer class="jumbotron-elem">
+                <input type="submit"  onclick="return goBack()" class="btn btn-red" href="reset.html" value="CANCEL">
+              <span>
+                <input type="submit"  onclick="validate(this.form)" class="btn btn-default" value="RESET PASSWORD">
+              </span>
+          </footer>
+          
+
+        </form>
+
+    </div>
+  </div>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+</script>
+</body>
+</html>

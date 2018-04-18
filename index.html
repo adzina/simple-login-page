@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title>Log in</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.min.css">
+</head>
+<body>
+
+
+  <div class="container">
+
+    <div class="jumbotron mx-auto">
+
+      <div class="top jumbotron-elem">
+              <img src="profile.png">
+      </div>
+        <form>
+          <div class="body jumbotron-elem">
+            <div class="form-group">
+              <label for="email" id="emailLabel">EMAIL ADDRESS</label>
+                 <div class="note">
+                      <p data-toggle="tooltip" data-placement="top" title="required" class="blue-tooltip">*</p>
+                    <input type="email" required="" class="form-control" id="email" placeholder="Enter your email address">
+                  </div>
+                  <span id="emailErr">Invalid e-mail address</span>
+            </div>
+            <div class="form-group">
+              <label for="password" id="passwordLabel">PASSWORD</label>
+                <div class="note">
+                    <p data-toggle="tooltip" data-placement="top" title="required" class="blue-tooltip">*</p>
+                <input type="password" required="" class="form-control" id="password" placeholder="Enter your password">
+               </div>
+               <span id="passwordErr">Invalid password</span>
+            </div>
+            <div class="form-check">
+
+              <input type="checkbox" class="form-check-input" id="check">
+              <label class="form-check-label" for="check">REMEMBER ME</label>
+            </div>
+        </div>
+
+          <footer class="jumbotron-elem">
+            <span><a href="reset.html">Forgotten password?</a> </span>
+            <input type="submit" onclick="validate(this.form)" class="btn btn-default" value="LOGIN">
+          </footer>
+
+        </form>
+
+    </div>
+  </div>
+  <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+  </script>
+</body>
+</html>
